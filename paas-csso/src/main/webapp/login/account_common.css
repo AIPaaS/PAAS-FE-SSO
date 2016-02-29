@@ -1,0 +1,57 @@
+* {
+	margin: 0px; padding: 0px; font-family: "Microsoft YaHei";
+}
+ul {
+	list-style: none;
+}
+#header {
+	padding: 0px; width: 100%; height: 74px; border-bottom-color: rgb(227, 227, 227);border-bottom: 1px solid #34495e;
+}
+#header .header-layout {
+	padding: 17px 0px; overflow: hidden;background: #e8ebf2;border-bottom: 1px solid #34495e;
+}
+#header .header-layout .logo {
+	background: url("../img/login_logo.png") no-repeat; height: 40px; float: left; display: inline-block;
+}
+#header .header-layout .logo a {
+	width: 160px; height: 40px; text-indent: -999em; overflow: hidden; float: left; display: inline-block;
+}
+#header .header-layout .logo-title {
+	width: auto; height: 30px; padding-top:10px; color: rgb(60, 60, 60); line-height: 30px; font-size: 16px; font-weight: normal; margin-top: 2px; float: left; display: inline-block;
+}
+#header .header-layout .header-nav {
+	width: auto; height: 14px; line-height: 14px; margin-top: 10px; float: right;
+}
+#header .header-layout .header-nav li {
+	padding: 0px 0px 0px 10px; margin-right: 10px; border-left-color: rgb(77, 77, 77); border-left-width: 1px; border-left-style: solid; float: left;
+}
+#header .header-layout .header-nav li.nav-first {
+	border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+#header .header-layout .header-nav li a {
+	color: rgb(102, 102, 102); font-size: 12px; text-decoration: none;
+}
+.copyright-100 {
+	background: rgb(255, 255, 255); clear: both; border-top-color: rgb(229, 229, 229); border-top-width: 1px; border-top-style: solid;
+}
+.copyright-100 .copyright {
+	padding: 35px 0px 40px; text-align: center; color: rgb(153, 153, 153); font-size: 12px;
+}
+.copyright-100 .copyright .img {
+	width: 22px; height: 22px; display: inline-block; background-image: url("/img/www-knight/footer-168-169.png");
+}
+.copyright-100 .copyright .img.img-1 {
+	background-position: 85px 113px;
+}
+.copyright-100 .copyright .img.img-2 {
+	background-position: 85px 91px;
+}
+.copyright-100 .copyright p {
+	padding: 5px 0px;
+}
+.copyright-100 .copyright p a {
+	padding: 0px 5px; color: rgb(179, 179, 179);
+}
+.copyright-100 .copyright p.big {
+	font-size-color: #666;
+}
