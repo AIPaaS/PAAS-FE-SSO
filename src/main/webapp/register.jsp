@@ -80,7 +80,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;邮箱地址：</span>
-<input class="form-control" type="email" id="contactEmail" name="contactEmail" required placeholder="example@asiainfo.com">
+<input class="form-control" type="email" required id="contactEmail" name="contactEmail" required placeholder="example@asiainfo.com">
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;成本中心：</span>
@@ -92,7 +92,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;联系电话：</span>
-<input class="form-control" id="contactPhone" name="contactPhone" type="text" required maxLength="40" placeholder="">
+<input class="form-control" id="contactPhone" name="contactPhone" type="text" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required="required" maxLength="11" placeholder="">
 </div>
 <div class="input-group col-xs-7 pull-left">
 <span class="input-group-addon"><i class="fa fa-qrcode"></i></span>
