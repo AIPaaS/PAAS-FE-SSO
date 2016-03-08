@@ -104,7 +104,7 @@ public class SysUserLoginListener implements UserLoginListener {
 		if(opls.size() > 0) op = opls.get(0);
 		
 		//认证用户
-		if(op == null) throw new SsoVerifyException(VerifyErrorCode.LOGIN_LOGINCODE_ERROR.toString(), "用户名输入错误!");
+		if(op == null) throw new SsoVerifyException(VerifyErrorCode.LOGIN_LOGINCODE_ERROR.toString(), "用户不存在或已注销!");
 		
 		String dbpwd = op.getLoginPasswd();
 		String pwd = Encrypt.encrypt(password);
