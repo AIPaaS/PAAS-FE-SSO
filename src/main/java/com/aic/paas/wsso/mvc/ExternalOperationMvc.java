@@ -108,9 +108,9 @@ public class ExternalOperationMvc {
 				return "登录密码为空";
 			}
 			
-			if(captchaCode==null || (captchaCode=captchaCode.trim()).length()==0) {
+			/*if(captchaCode==null || (captchaCode=captchaCode.trim()).length()==0) {
 				return "验证码为空";
-			}
+			}*/
 			
 			if(BinaryUtils.isEmpty(mnt.getContactEmail())) {
 				return "邮箱地址为空";
@@ -125,7 +125,7 @@ public class ExternalOperationMvc {
 				return "联系电话为空";
 			}
 			
-			HttpSession session = request.getSession();
+			/*HttpSession session = request.getSession();
 			String sessioncode = (String)session.getAttribute(EO_REGISTER_CAPTCHA);
 			if(sessioncode==null || (sessioncode=sessioncode.trim()).length()==0) {
 				return "验证码图片为空";
@@ -134,7 +134,7 @@ public class ExternalOperationMvc {
 			session.removeAttribute(EO_REGISTER_CAPTCHA);
 			if(!captchaCode.equalsIgnoreCase(sessioncode)) {
 				return "验证码输入错误";
-			}
+			}*/
 			
 			String s = eoSvc.register(mnt);
 			if(!BinaryUtils.isEmpty(s)) {

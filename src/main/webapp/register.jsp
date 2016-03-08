@@ -94,13 +94,13 @@ String ContextPath = request.getContextPath();
 <span class="input-group-addon">&nbsp;&nbsp;联系电话：</span>
 <input class="form-control" id="contactPhone" name="contactPhone" type="text" required maxLength="40" placeholder="">
 </div>
-<div class="input-group col-xs-7 pull-left">
+<!--  <div class="input-group col-xs-7 pull-left">
 <span class="input-group-addon"><i class="fa fa-qrcode"></i></span>
 <input class="form-control" type="text" id="captchaCode" name="captchaCode" required pattern="([0-9]|[a-zA-Z]){4}" placeholder="验证码">
-</div>
+</div> 
 <div class="input-group col-xs-5 pull-left">
 <img id="img_captcha" class="form-control" src="###" style="cursor:pointer">
-</div>
+</div> -->
 
 <div id="remember-me-wrapper">
 <div class="row">
@@ -164,7 +164,7 @@ function register() {
 	RS.ajax({url:"/external/operation/register",ps:form,cb:function(rs) {
 		if(!CU.isEmpty(rs)) {
 			setErrMsg(rs);
-			getCaptchaImage();
+			//getCaptchaImage();
 			return ;
 		}
 		window.location = ContextPath + "/regsucc.jsp?mntCode="+form.mntCode+"&mntName="+encodeURIComponent(form.mntName)+"&email="+encodeURIComponent(form.contactEmail);
@@ -177,8 +177,8 @@ $(document).ready(function() {
 	    e.preventDefault();
 	    register();
 	});
-	$("#img_captcha").bind('click', getCaptchaImage);
-	getCaptchaImage();
+	/* $("#img_captcha").bind('click', getCaptchaImage);
+	getCaptchaImage(); */
 });
 
 </script>
