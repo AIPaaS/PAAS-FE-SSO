@@ -64,7 +64,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;租户名称：</span>
-<input class="form-control" id="mntName" name="mntName" type="text" pattern="[\u4e00-\u9fa5]" required maxLength="20" placeholder="中文名称">
+<input class="form-control" id="mntName" name="mntName" type="text" maxLength="20" placeholder="名称">
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;登录账号：</span>
