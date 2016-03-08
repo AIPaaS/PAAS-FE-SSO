@@ -64,7 +64,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;租户名称：</span>
-<input class="form-control" id="mntName" name="mntName" type="text" required maxLength="20" placeholder="中文名称">
+<input class="form-control" id="mntName" name="mntName" type="text" pattern="[\u4e00-\u9fa5]" required maxLength="20" placeholder="中文名称">
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;登录账号：</span>
@@ -80,7 +80,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;邮箱地址：</span>
-<input class="form-control" type="email" id="contactEmail" name="contactEmail" required placeholder="example@asiainfo.com">
+<input class="form-control" type="email" required id="contactEmail" name="contactEmail" required placeholder="example@asiainfo.com">
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;成本中心：</span>
@@ -92,15 +92,15 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;联系电话：</span>
-<input class="form-control" id="contactPhone" name="contactPhone" type="text" required maxLength="40" placeholder="">
+<input class="form-control" id="contactPhone" name="contactPhone" type="text" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required="required" maxLength="11" placeholder="">
 </div>
-<!--  <div class="input-group col-xs-7 pull-left">
+<div class="input-group col-xs-7 pull-left">
 <span class="input-group-addon"><i class="fa fa-qrcode"></i></span>
 <input class="form-control" type="text" id="captchaCode" name="captchaCode" required pattern="([0-9]|[a-zA-Z]){4}" placeholder="验证码">
-</div> 
+</div>
 <div class="input-group col-xs-5 pull-left">
 <img id="img_captcha" class="form-control" src="###" style="cursor:pointer">
-</div> -->
+</div>
 
 <div id="remember-me-wrapper">
 <div class="row">
@@ -164,7 +164,7 @@ function register() {
 	RS.ajax({url:"/external/operation/register",ps:form,cb:function(rs) {
 		if(!CU.isEmpty(rs)) {
 			setErrMsg(rs);
-			//getCaptchaImage();
+			getCaptchaImage();
 			return ;
 		}
 		window.location = ContextPath + "/regsucc.jsp?mntCode="+form.mntCode+"&mntName="+encodeURIComponent(form.mntName)+"&email="+encodeURIComponent(form.contactEmail);
@@ -177,8 +177,8 @@ $(document).ready(function() {
 	    e.preventDefault();
 	    register();
 	});
-	/* $("#img_captcha").bind('click', getCaptchaImage);
-	getCaptchaImage(); */
+	$("#img_captcha").bind('click', getCaptchaImage);
+	getCaptchaImage();
 });
 
 </script>
