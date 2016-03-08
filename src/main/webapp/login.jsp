@@ -59,7 +59,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-<input class="form-control" id="mntCode" name="mntCode" type="text" placeholder="租户名">
+<input class="form-control" id="mntCode" name="mntCode" type="text" required  placeholder="租户名">
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
