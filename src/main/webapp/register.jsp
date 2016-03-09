@@ -24,7 +24,7 @@ String ContextPath = request.getContextPath();
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/compiled/calendar.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/morris.css" type="text/css"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/daterangepicker.css" type="text/css"/>
-<link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/>
+<!-- <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/> -->
 
 <script src="<%=ContextPath%>/frame/jquery/jquery-1.11.3.min.js"></script>
 <script src="<%=ContextPath%>/frame/bootstrap/js/bootstrap.min.js"></script>
@@ -64,7 +64,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;租户名称：</span>
-<input class="form-control" id="mntName" name="mntName" type="text" maxLength="20" placeholder="名称">
+<input class="form-control" id="mntName" name="mntName" type="text" required maxLength="20" placeholder="名称">
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;登录账号：</span>
