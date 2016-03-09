@@ -39,7 +39,7 @@
 		<init-param>
 			<!-- 不需要验证用户登录的路径正则表达式, 多个值以分号[;]分隔 , 不需要包含Context -->
 			<param-name>ignore-login-pattern</param-name>
-			<param-value>/index.jsp;/user/auth/login;/user/auth/getcaptchaimage;/user/auth/verify;/user/auth/getuserbytoken;/register.jsp;/external/operation/login;/forgetpwd.jsp;/regsucc.jsp;/activuser-rlt.jsp;/external/operation/**</param-value>
+			<param-value>/index.jsp;/error2.jsp;/user/auth/login;/user/auth/getcaptchaimage;/user/auth/verify;/user/auth/getuserbytoken;/register.jsp;/external/operation/login;/forgetpwd.jsp;/regsucc.jsp;/activuser-rlt.jsp;/external/operation/**</param-value>
 		</init-param>
 		<init-param>
 			<!-- 验证不通过时所跳向的页面 -->
