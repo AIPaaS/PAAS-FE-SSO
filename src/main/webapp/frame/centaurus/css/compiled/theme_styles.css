@@ -2167,6 +2167,35 @@ html,body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-s
     background-color: #1abc9c;
   }
 }
-
+/*20160310 jia add*/
 html, body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+#login-box .input-group{margin-bottom:0px;}
+/*注册页面提示*/
+.error_com{height:23px;line-height:23px;}
+.error_com span{padding-left:82px;font-size:12px;color:#f00;}
+#login-box .input-group{position:relative;}
+.sucess_cion{width:16px;height:16px;display:block;position:absolute;z-index:3;right:8px;top:15px;}
+.zh_tit span{display:none;}
+.sucess_cion{display:none;}
+.form-control-bred{border:1px solid #f00!important;}
+/* 租户名称*/
+.zh_name span{display:none;}
+/*密码 */
+.one_pass span{display:none;}
+/*密码确认 */
+.two_pass span{display:none;}
+/*邮箱 */
+.email_add span{display:none;}
+/*成本中心 */
+.cb_num span{display:none;}
+/*联系人员 */
+.contact_num span{display:none;}
+/*联系方式 */
+.phone_add span{display:none;}
+
+.register_main #login-box-inner .input-group>.input-group-addon{position:relative;}
+.register_main #login-box-inner .input-group>.input-group-addon:before{content:"*";color:#f00;position:absolute;}
+#login-box-inner{padding:30px 25px;}
+.reg_login{float:right;padding-right:18px;}
+#login-box #remember-me-wrapper{padding:0px;}
 
