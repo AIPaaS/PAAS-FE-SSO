@@ -10,7 +10,6 @@ String ContextPath = request.getContextPath();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<title>亚信云-PAAS平台-登录</title>
 	<link rel="shortcut icon" href="<%=ContextPath%>/img/favicon.png" type="image/x-png" />
 
@@ -24,8 +23,8 @@ String ContextPath = request.getContextPath();
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/compiled/calendar.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/morris.css" type="text/css"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/daterangepicker.css" type="text/css"/>
-<!-- <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/> -->
-
+<link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/>
+<!--[if lt IE 9]><script>window.location = '<%=ContextPath%>/error2.jsp';</script><![endif]-->
 <script src="<%=ContextPath%>/frame/jquery/jquery-1.11.3.min.js"></script>
 <script src="<%=ContextPath%>/frame/bootstrap/js/bootstrap.min.js"></script>
 <script src="<%=ContextPath%>/frame/centaurus/js/scripts.js"></script>
@@ -59,7 +58,7 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-<input class="form-control" id="mntCode" name="mntCode" type="text" required  placeholder="租户名">
+<input class="form-control" id="mntCode" name="mntCode" type="text" placeholder="租户名">
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
