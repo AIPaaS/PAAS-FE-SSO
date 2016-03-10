@@ -60,15 +60,17 @@ String ContextPath = request.getContextPath();
 <span class="input-group-addon"><i class="fa fa-users"></i></span>
 <input class="form-control" id="mntCode" name="mntCode" type="text" placeholder="租户名">
 </div>
+<div class="lg_ht"></div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
 <input class="form-control" id="loginCode" name="loginCode" type="text" placeholder="用户名">
 </div>
+<div class="lg_ht"></div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-key"></i></span>
 <input type="password" class="form-control" id="loginPwd" name="loginPwd" placeholder="登录密码">
 </div>
-
+<div class="lg_ht"></div>
 <div class="input-group col-xs-7 pull-left">
 <span class="input-group-addon"><i class="fa fa-qrcode"></i></span>
 <input class="form-control" type="text" id="captchaCode" name="captchaCode" placeholder="验证码">
@@ -80,6 +82,7 @@ String ContextPath = request.getContextPath();
 <div id="remember-me-wrapper">
 <div class="row">
 <div class="pull-right">
+<div class="lg_ht"></div>
 <a href="<%=ContextPath%>/register.jsp">注册申请</a>&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 </div>
