@@ -19,7 +19,7 @@ if(ex != null) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>AMC温馨提示：您的浏览器需要更新才能访问哦^_^</title>
+<title>亚信云温馨提示：您的浏览器需要更新才能访问哦^_^</title>
 <meta charset="utf-8" />
 <style>
 body { text-align:center; padding-top:30px; }
