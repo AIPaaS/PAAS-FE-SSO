@@ -14,8 +14,6 @@ if(ex != null) {
 
 %>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
