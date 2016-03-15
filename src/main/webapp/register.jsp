@@ -114,7 +114,7 @@ String ContextPath = request.getContextPath();
 
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;联系方式：</span>
-<input class="form-control" id="contactPhone" name="contactPhone" type="text" required="required" maxLength="11" placeholder="请输入手机号">
+<input class="form-control" id="contactPhone" name="contactPhone" onkeyup="value=value.replace(/[^\d]/g,'')" type="text" required="required" maxLength="11" placeholder="请输入手机号">
 <img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
 </div>
 <div class="error_com phone_add"><span>请输入手机号</span></div>
