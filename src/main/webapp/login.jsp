@@ -24,7 +24,6 @@ String ContextPath = request.getContextPath();
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/morris.css" type="text/css"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/daterangepicker.css" type="text/css"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/>
-<!--[if lt IE 9]><script>window.location = '<%=ContextPath%>/error2.jsp';</script><![endif]-->
 <script src="<%=ContextPath%>/frame/jquery/jquery-1.11.3.min.js"></script>
 <script src="<%=ContextPath%>/frame/bootstrap/js/bootstrap.min.js"></script>
 <script src="<%=ContextPath%>/frame/centaurus/js/scripts.js"></script>
