@@ -66,10 +66,10 @@ String ContextPath = request.getContextPath();
 <div class="error_com zh_tit"><span>请输入1-32位字母或数字组合</span></div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;租户名称：</span>
-<input class="form-control" id="mntName" name="mntName" type="text" required maxLength="100" placeholder="请输入租户名称">
+<input class="form-control" id="mntName" name="mntName" type="text" required maxLength="32" placeholder="请输入1-32位长度租户名称">
 <img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
 </div>
-<div class="error_com zh_name"><span>请输入名称</span></div>
+<div class="error_com zh_name"><span>请输入规范名称</span></div>
 <div class="input-group">
 <span class="input-group-addon add_count">&nbsp;&nbsp;登录账号：</span>
 <input class="form-control" id="loginCode" name="loginCode" type="text" readOnly value="admin">
@@ -227,7 +227,7 @@ $(function(){
 	$("#mntName").keyup(
 			function(){
 				var code = $(this).val();
-		   		var reg_name = /^.{1,100}$/; 
+		   		var reg_name = /^.{1,32}$/; 
 		   		if(reg_name.test(code)){
 		   			$(this).next(".sucess_cion").show();
 		   			$(".zh_name span").hide();
