@@ -18,7 +18,7 @@ import com.aic.paas.wsso.bean.WsMerchent;
 import com.aic.paas.wsso.rest.MerchentSvc;
 import com.aic.paas.wsso.rest.SysOpOrgSvc;
 import com.aic.paas.wsso.rest.SysOpSvc;
-import com.binary.core.encrypt.Encrypt;
+import com.binary.core.encrypt.EncryptAES;
 import com.binary.core.util.BinaryUtils;
 import com.binary.framework.bean.User;
 import com.binary.framework.exception.ServiceException;
@@ -107,7 +107,7 @@ public class SysUserLoginListener implements UserLoginListener {
 		if(op == null) throw new SsoVerifyException(VerifyErrorCode.LOGIN_LOGINCODE_ERROR.toString(), "用户不存在或已注销!");
 		
 		String dbpwd = op.getLoginPasswd();
-		String pwd = Encrypt.encrypt(password);
+		String pwd = EncryptAES.encrypt(password);
 		if(!pwd.equals(dbpwd)) throw new SsoVerifyException(VerifyErrorCode.LOGIN_PASSWORD_ERROR.toString(), "登录密码输入错误!");
 		
 		Integer opstatus = op.getStatus();
