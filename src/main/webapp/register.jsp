@@ -126,11 +126,11 @@ String ContextPath = request.getContextPath();
 <img id="img_captcha" class="form-control" src="###" style="cursor:pointer">
 </div> -->
 
-<div id="remember-me-wrapper">
+<%-- <div id="remember-me-wrapper">
 <div class="row">
 &nbsp;<a href="<%=ContextPath%>/login.jsp" class="reg_login">登 录</a>
 </div>
-</div>
+</div> --%>
 
 <div class="row">
 <div class="col-xs-12">
