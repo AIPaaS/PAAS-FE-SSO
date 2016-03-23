@@ -42,7 +42,7 @@ String ContextPath = request.getContextPath();
 <div class="row">
 <div class="col-xs-12">
 <div id="login-box">
-<div id="login-box-holder" class="register_main">
+<div id="login-box-holder">
 <div class="row">
 <div class="col-xs-12">
 <header id="login-header">
@@ -60,64 +60,40 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;租户代码：</span>
-<input class="form-control renter" id="mntCode" name="mntCode" type="text" required maxLength="32" placeholder="1-32位字母或数字组合">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input class="form-control" id="mntCode" name="mntCode" type="text" required maxLength="32" pattern="([0-9]|[a-zA-Z]){1,32}" title="1-32位字母或数字组合" placeholder="1-32位字母或数字组合">
 </div>
-<div class="error_com zh_tit"><span>请输入1-32位字母或数字组合</span></div>
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;租户名称：</span>
-<input class="form-control" id="mntName" name="mntName" type="text" required maxLength="32" placeholder="请输入1-32位长度租户名称">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input class="form-control" id="mntName" name="mntName" type="text" required maxLength="20" title="租户名称" placeholder="租户名称">
 </div>
-<div class="error_com zh_name"><span>请输入规范名称</span></div>
 <div class="input-group">
-<span class="input-group-addon add_count">&nbsp;&nbsp;登录账号：</span>
+<span class="input-group-addon">&nbsp;&nbsp;登录账号：</span>
 <input class="form-control" id="loginCode" name="loginCode" type="text" readOnly value="admin">
 </div>
-<div class="error_com"></div>
-
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;登录密码：</span>
-<input type="password" class="form-control" id="mntPwd" name="mntPwd" required maxLength="16" pattern=".{6,16}" placeholder="6-16位">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input type="password" class="form-control" id="mntPwd" name="mntPwd" required maxLength="16" pattern=".{6,16}" title="6-16位" placeholder="6-16位">
 </div>
-<div class="error_com one_pass"><span>请输入6-16位密码</span></div>
-
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;密码确认：</span>
-<input type="password" class="form-control" id="mntPwd2" name="mntPwd2" required maxLength="16" pattern=".{6,16}" placeholder="6-16位">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input type="password" class="form-control" id="mntPwd2" name="mntPwd2" required maxLength="16" pattern=".{6,16}" title="6-16位" placeholder="6-16位">
 </div>
-<div class="error_com two_pass"><span>两次密码不一致</span></div>
-
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;邮箱地址：</span>
-<input class="form-control" type="email" required id="contactEmail" name="contactEmail" required placeholder="example@asiainfo.com">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input class="form-control" type="email" required id="contactEmail" name="contactEmail" required title="example@asiainfo.com" placeholder="example@asiainfo.com">
 </div>
-<div class="error_com email_add"><span>请输入邮箱地址</span></div>
-
-
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;成本中心：</span>
-<input class="form-control" id="ccCode" name="ccCode" type="text" required maxLength="20" placeholder="1-20位">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input class="form-control" id="ccCode" name="ccCode" type="text" required maxLength="20" title="1-20位" placeholder="1-20位">
 </div>
-<div class="error_com cb_num"><span>请输入1-20位</span></div>
-
 <div class="input-group">
 <span class="input-group-addon">&nbsp;&nbsp;联系人员：</span>
-<input class="form-control" id="contactName" name="contactName" type="text" required maxLength="20" placeholder="1-40位">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<input class="form-control" id="contactName" name="contactName" type="text" required maxLength="20" title="1-40位" placeholder="1-40位">
 </div>
-<div class="error_com contact_num"><span>请输入1-40位</span></div>
-
 <div class="input-group">
-<span class="input-group-addon">&nbsp;&nbsp;联系方式：</span>
-<input class="form-control" id="contactPhone" name="contactPhone" onkeyup="value=value.replace(/[^\d]/g,'')" type="text" required="required" maxLength="11" placeholder="请输入手机号">
-<img src="<%=ContextPath%>/img/sucess.png" class="sucess_cion"/>
+<span class="input-group-addon">&nbsp;&nbsp;联系电话：</span>
+<input class="form-control" id="contactPhone" name="contactPhone" type="text" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required="required" maxLength="11" title="请输入手机号" placeholder="请输入手机号">
 </div>
-<div class="error_com phone_add"><span>请输入手机号</span></div>
 <!-- <div class="input-group col-xs-7 pull-left">
 <span class="input-group-addon"><i class="fa fa-qrcode"></i></span>
 <input class="form-control" type="text" id="captchaCode" name="captchaCode" required pattern="([0-9]|[a-zA-Z]){4}" placeholder="验证码">
@@ -126,12 +102,11 @@ String ContextPath = request.getContextPath();
 <img id="img_captcha" class="form-control" src="###" style="cursor:pointer">
 </div> -->
 
-<%-- <div id="remember-me-wrapper">
+<div id="remember-me-wrapper">
 <div class="row">
-&nbsp;<a href="<%=ContextPath%>/login.jsp" class="reg_login">登 录</a>
+&nbsp;
 </div>
-</div> --%>
-
+</div>
 <div class="row">
 <div class="col-xs-12">
 <button type="submit" id="fm-reg-submit" name="fm-reg-submit" class="btn btn-success col-xs-12">注册</button>
@@ -205,150 +180,6 @@ $(document).ready(function() {
 	/* $("#img_captcha").bind('click', getCaptchaImage);
 	getCaptchaImage(); */
 });
-
-$(function(){
-	//租户代码：
-	$("#mntCode").keyup(
-		function(){
-			var code = $(this).val();
-	   		var reg = /^[A-Za-z0-9]{1,32}$/;
-	   		if(reg.test(code)){
-	   			$(this).next(".sucess_cion").show();
-	   			$(".zh_tit span").hide();
-	   			$("#mntCode").removeClass("form-control-bred");
-	   		}else{
-	   			$(this).next(".sucess_cion").hide();
-	   			$(".zh_tit span").show();
-	   			$("#mntCode").addClass("form-control-bred");
-	   			}
-			}
-		);
-	//租户名称
-	$("#mntName").keyup(
-			function(){
-				var code = $(this).val();
-		   		var reg_name = /^.{1,32}$/; 
-		   		if(reg_name.test(code)){
-		   			$(this).next(".sucess_cion").show();
-		   			$(".zh_name span").hide();
-		   			$("#mntName").removeClass("form-control-bred");
-		   		}else{
-		   			$(this).next(".sucess_cion").hide();
-		   			$(".zh_name span").show();
-		   			$("#mntName").addClass("form-control-bred");
-		   			}
-				}
-			);
-	
-	//登录密码
-	$("#mntPwd").keyup(
-			function(){
-				var code = $(this).val();
-		   		var reg_pass = /^.{6,16}$/; 
-		   		if(reg_pass.test(code)){
-		   			$(this).next(".sucess_cion").show();
-		   			$(".one_pass span").hide();
-		   			$("#mntPwd").removeClass("form-control-bred");
-		   		}else{
-		   			$(this).next(".sucess_cion").hide();
-		   			$(".one_pass span").show();
-		   			$("#mntPwd").addClass("form-control-bred");
-		   			}
-				}
-			);
-	
-	//密码确认
-	$("#mntPwd2").keyup(
-			function(){
-				var mntPwd = $("#mntPwd").val();
-				var mntPwd2 = $("#mntPwd2").val();
-				if(mntPwd2 != mntPwd){
-					$(".two_pass span").show();
-					$(this).next(".sucess_cion").hide();
-					$("#mntPwd2").addClass("form-control-bred");
-					
-	   			}else{
-	   				$(".two_pass span").hide();
-	   				$(this).next(".sucess_cion").show();
-	   				$("#mntPwd2").removeClass("form-control-bred");
-	   				}
-				}
-			);
-	
-	//邮箱地址
-	$("#contactEmail").keyup(
-			function(){
-				var code = $(this).val();
-		   		var email_name = /\w+[@]{1}\w+[.]\w+/;
-		   		if(email_name.test(code)){
-		   			$(this).next(".sucess_cion").show();
-		   			$(".email_add span").hide();
-		   			$("#contactEmail").removeClass("form-control-bred");
-		   		}else{
-		   			$(this).next(".sucess_cion").hide();
-		   			$(".email_add span").show();
-		   			$("#contactEmail").addClass("form-control-bred");
-		   			}
-				}
-			);
-	
-	//成本中心
-	$("#ccCode").keyup(
-			function(){
-				var code = $(this).val();
-		   		var code_num = /^.{1,20}$/; 
-		   		if(code_num.test(code)){
-		   			$(this).next(".sucess_cion").show();
-		   			$(".cb_num span").hide();
-		   			$("#ccCode").removeClass("form-control-bred");
-		   		}else{
-		   			$(this).next(".sucess_cion").hide();
-		   			$(".cb_num span").show();
-		   			$("#ccCode").addClass("form-control-bred");
-		   			}
-				}
-			);
-	
-	//联系方式
-	$("#contactPhone").keyup(
-			function(){
-				var code = $(this).val();
-		   		var phone_n = /^1[3,5,8]\d{9}$/; 
-		   		if(phone_n.test(code)){
-		   			$(this).next(".sucess_cion").show();
-		   			$(".phone_add span").hide();
-		   			$("#contactPhone").removeClass("form-control-bred");
-		   		}else{
-		   			$(this).next(".sucess_cion").hide();
-		   			$(".phone_add span").show();
-		   			$("#contactPhone").addClass("form-control-bred");
-		   			}
-				}
-			);
-	
-	
-	//联系人员
-	$("#contactName").keyup(
-			function(){
-				var code = $(this).val();
-		   		var contact_num = /^.{1,40}$/; 
-		   		if(contact_num.test(code)){
-		   			$(this).next(".sucess_cion").show();
-		   			$(".contact_num span").hide();
-		   			$("#contactName").removeClass("form-control-bred");
-		   		}else{
-		   			$(this).next(".sucess_cion").hide();
-		   			$(".contact_num span").show();
-		   			$("#contactName").addClass("form-control-bred");
-		   			}
-				}
-			);
-	
-	
-	
-		
-	
-})
 
 </script>
 </html>

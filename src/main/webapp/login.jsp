@@ -10,6 +10,7 @@ String ContextPath = request.getContextPath();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<title>亚信云-PAAS平台-登录</title>
 	<link rel="shortcut icon" href="<%=ContextPath%>/img/favicon.png" type="image/x-png" />
 
@@ -23,7 +24,8 @@ String ContextPath = request.getContextPath();
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/compiled/calendar.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/morris.css" type="text/css"/>
 <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/daterangepicker.css" type="text/css"/>
-<link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/>
+<!-- <link rel="stylesheet" href="<%=ContextPath%>/frame/centaurus/css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/> -->
+
 <script src="<%=ContextPath%>/frame/jquery/jquery-1.11.3.min.js"></script>
 <script src="<%=ContextPath%>/frame/bootstrap/js/bootstrap.min.js"></script>
 <script src="<%=ContextPath%>/frame/centaurus/js/scripts.js"></script>
@@ -57,22 +59,20 @@ String ContextPath = request.getContextPath();
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-<input class="form-control" id="mntCode" name="mntCode" type="text" placeholder="租户名">
+<input class="form-control" id="mntCode" name="mntCode" type="text" required title="租户名"  placeholder="租户名">
 </div>
-<div class="lg_ht"></div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-<input class="form-control" id="loginCode" name="loginCode" type="text" placeholder="用户名">
+<input class="form-control" id="loginCode" name="loginCode" type="text" title="用户名" placeholder="用户名">
 </div>
-<div class="lg_ht"></div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-key"></i></span>
-<input type="password" class="form-control" id="loginPwd" name="loginPwd" placeholder="登录密码">
+<input type="password" class="form-control" id="loginPwd" name="loginPwd" title="登录密码" placeholder="登录密码">
 </div>
-<div class="lg_ht"></div>
+
 <div class="input-group col-xs-7 pull-left">
 <span class="input-group-addon"><i class="fa fa-qrcode"></i></span>
-<input class="form-control" type="text" id="captchaCode" name="captchaCode" placeholder="验证码">
+<input class="form-control" type="text" id="captchaCode" name="captchaCode" title="验证码" placeholder="验证码">
 </div>
 <div class="input-group col-xs-5 pull-left">
 <img id="img_captcha" class="form-control" src="###" style="cursor:pointer">
@@ -81,7 +81,6 @@ String ContextPath = request.getContextPath();
 <div id="remember-me-wrapper">
 <div class="row">
 <div class="pull-right">
-<div class="lg_ht"></div>
 <a href="<%=ContextPath%>/register.jsp">注册申请</a>&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 </div>
